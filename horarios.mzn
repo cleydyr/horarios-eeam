@@ -345,12 +345,12 @@ constraint forall (j in professores)(
   sum(q in aulas, p in horarios)(S[p, q] * T[q, j]) == K[j]
 );
 
-%R5
+% R5
 constraint forall (j in aulas, h in 1..length(horarios)-2)(
   (S[horarios[h], j] + S[horarios[h+1], j] + S[horarios[h+2], j]) < 3
 );
 
-%R6
+% R6
 constraint forall (i in horarios, j in turmas) (
   sum(k in aulas)(S[i, k]*g[k, j]) == 1
 );
@@ -359,10 +359,6 @@ constraint forall (i in horarios, j in turmas) (
 constraint forall (d in dias, a in aulas)(
   sum(h in horarios)(Q[d, h]*S[h, a]) < 3
 );
-
-% solve maximize sum(i in horarios, j in aulas) (
-%   sum(k in horarios)(v[i, k] * S[k, j])
-% );
 
 solve maximize sum(j in aulas) (
   sum(k in 1..length(horarios)-1)(if ((k mod 5) != 0) /\ (S[horarios[k], j] == 1) /\ (S[horarios[k+1], j] == 1) then 1 else 0 endif)
