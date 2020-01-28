@@ -8,6 +8,8 @@ array[professores] of int: K = [23, 26, 20, 29, 30, 26, 30, 25, 26, 11, 26, 12, 
 
 enum horarios = {seg1, seg2, seg3, seg4, seg5, seg6, ter1, ter2, ter3, ter4, ter5, ter6, qua1, qua2, qua3, qua4, qua5, qua6, qui1, qui2, qui3, qui4, qui5, qui6, sex1, sex2, sex3, sex4, sex5, sex6};
 
+int: horas = 6;
+
 enum dias = {seg, ter, qua, qui, sex};
 
 array[dias, horarios] of 0..1: Q =
@@ -634,17 +636,17 @@ constraint forall (h in horarios, a in aulas where a >= BIO_R2A /\ a <= BIO_R2C)
 );
 
 % Preferências por aulas trocáveis
-constraint forall(h in horarios) (
-  S[h, MATF_R1A] == 0 \/ S[h, ROB_R1B] == 1
+constraint forall(h in horarios where S[h, MATF_R1A] == 1) (
+  S[h, ROB_R1B] == 1
 );
-constraint forall(h in horarios) (
-  S[h, GEOPE_R1C] == 0 \/ S[h, MATF_R1D] == 1
+constraint forall(h in horarios where S[h, GEOPE_R1C] == 1) (
+  S[h, MATF_R1D] == 1
 );
-constraint forall(h in horarios) (
-  S[h, ROB_R1E] == 0 \/ S[h, GEOPE_R1F] == 1
+constraint forall(h in horarios where S[h, ROB_R1E] == 1) (
+  S[h, GEOPE_R1F] == 1
 );
-constraint forall(h in horarios) (
-  S[h, CULPE_R2A] == 0 \/ (S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1)
+constraint forall(h in horarios where S[h, CULPE_R2A] == 1) (
+  S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1
 );
 
 set of horarios: sextasAulas = {seg6, ter6, qua6, qui6, sex6};
@@ -656,8 +658,28 @@ constraint forall(h in sextasAulas, a in aulasDoTerceiro) (
   S[h, a] == 0
 );
 
+predicate horarioNoDia(horarios: h, dias: d) = ((h-1) div horas) + 1 == d;
+
+predicate ultimaAula(horarios: h) = (h mod horas) == 0;
+
+% predicate ultimaAula(horarios: h) = trace("\(h) mod \(horas) == \(h mod horas)\n", h mod horas == 0);
+
+predicate primeiraAula(horarios: h) = (h mod horas) == 1;
+
+% Se existem duas aulas no dia, elas têm que ser geminadas.
+% constraint forall(d in dias, a in aulas where sum(h in horarios where horarioNoDia(h, d))(S[h, a]) == 2) (
+%     forall(h in horarios where (not ultimaAula(h)) /\ (S[h, a] == 1)) (
+%       S[enum_next(horarios, h), a] == 1
+%     ) /\
+%     forall(h in horarios where (not primeiraAula(h)) /\ (S[h, a] == 1)) (
+%       S[enum_prev(horarios, h), a] == 1
+%     )
+% );
+
 % solve satisfy
 
-solve maximize sum(j in aulas) (
-  sum(k in 1..length(horarios)-1)(if ((k mod 6) != 0) /\ (S[horarios[k], j] == 1) /\ (S[horarios[k+1], j] == 1) then 1 else 0 endif)
+solve maximize sum(a in aulas) (
+  sum(h in horarios) (
+    if (not ultimaAula(h)) /\ S[h, a] == 1 then S[enum_next(horarios, h), a] else 0 endif
+  )
 );
