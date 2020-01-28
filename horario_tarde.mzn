@@ -1,8 +1,8 @@
 % Use this editor as a MiniZinc scratch book
 enum disciplinas = {POR, ESP, ING, ART, MAT, FIS, QUI, BIO, HIS, GEO, SOC, FIL, EDF, EMP, MAF, GPE, ROB, CPE, MEA};
-enum turmas = {R1A, R1B, R1C, R1D, R1E, R1F, R2A, R2B, R2C, R3A, R3B};
+enum turmas = {R1G, R1H, R1I, R2D, R2E, R3C, R3D, M2A};
 enum professores = {DY, MA, SH, LI, FB, FT, RI, LU, AD, K, IL, LZ, BH, GA, Y, Z, CJ, W, H, SI, AA, MB};
-enum aulas = {POR_R1A, POR_R1B, POR_R1C, POR_R1D, POR_R1E, POR_R1F, POR_R2A, POR_R2B, POR_R2C, POR_R3A, POR_R3B, ESP_R1A, ESP_R1B, ESP_R1C, ESP_R1D, ESP_R1E, ESP_R1F, ESP_R2A, ESP_R2B, ESP_R2C, ESP_R3A, ESP_R3B, ING_R1A, ING_R1B, ING_R1C, ING_R1D, ING_R1E, ING_R1F, ING_R2A, ING_R2B, ING_R2C, ING_R3A, ING_R3B, ART_R1A, ART_R1B, ART_R1C, ART_R1D, ART_R1E, ART_R1F, ART_R2A, ART_R2B, ART_R2C, ART_R3A, ART_R3B, MAT_R1A, MAT_R1B, MAT_R1C, MAT_R1D, MAT_R1E, MAT_R1F, MAT_R2A, MAT_R2B, MAT_R2C, MAT_R3A, MAT_R3B, FIS_R1A, FIS_R1B, FIS_R1C, FIS_R1D, FIS_R1E, FIS_R1F, FIS_R2A, FIS_R2B, FIS_R2C, FIS_R3A, FIS_R3B, QUI_R1A, QUI_R1B, QUI_R1C, QUI_R1D, QUI_R1E, QUI_R1F, QUI_R2A, QUI_R2B, QUI_R2C, QUI_R3A, QUI_R3B, BIO_R1A, BIO_R1B, BIO_R1C, BIO_R1D, BIO_R1E, BIO_R1F, BIO_R2A, BIO_R2B, BIO_R2C, BIO_R3A, BIO_R3B, HIS_R1A, HIS_R1B, HIS_R1C, HIS_R1D, HIS_R1E, HIS_R1F, HIS_R2A, HIS_R2B, HIS_R2C, HIS_R3A, HIS_R3B, GEO_R1A, GEO_R1B, GEO_R1C, GEO_R1D, GEO_R1E, GEO_R1F, GEO_R2A, GEO_R2B, GEO_R2C, GEO_R3A, GEO_R3B, SOC_R1A, SOC_R1B, SOC_R1C, SOC_R1D, SOC_R1E, SOC_R1F, SOC_R2A, SOC_R2B, SOC_R2C, SOC_R3A, SOC_R3B, FIL_R1A, FIL_R1B, FIL_R1C, FIL_R1D, FIL_R1E, FIL_R1F, FIL_R2A, FIL_R2B, FIL_R2C, FIL_R3A, FIL_R3B, EDF_R1A, EDF_R1B, EDF_R1C, EDF_R1D, EDF_R1E, EDF_R1F, EDF_R2A, EDF_R2B, EDF_R2C, EDF_R3A, EDF_R3B, EMP_R1A, EMP_R1B, EMP_R1C, EMP_R1D, EMP_R1E, EMP_R1F, EMP_R2A, EMP_R2B, EMP_R2C, EMP_R3A, EMP_R3B, MAF_R1A, MAF_R1B, MAF_R1C, MAF_R1D, MAF_R1E, MAF_R1F, MAF_R2A, MAF_R2B, MAF_R2C, MAF_R3A, MAF_R3B, GPE_R1A, GPE_R1B, GPE_R1C, GPE_R1D, GPE_R1E, GPE_R1F, GPE_R2A, GPE_R2B, GPE_R2C, GPE_R3A, GPE_R3B, ROB_R1A, ROB_R1B, ROB_R1C, ROB_R1D, ROB_R1E, ROB_R1F, ROB_R2A, ROB_R2B, ROB_R2C, ROB_R3A, ROB_R3B, CPE_R1A, CPE_R1B, CPE_R1C, CPE_R1D, CPE_R1E, CPE_R1F, CPE_R2A, CPE_R2B, CPE_R2C, CPE_R3A, CPE_R3B, MEA_R1A, MEA_R1B, MEA_R1C, MEA_R1D, MEA_R1E, MEA_R1F, MEA_R2A, MEA_R2B, MEA_R2C, MEA_R3A, MEA_R3B};
+enum aulas = {POR_R1G, POR_R1H, POR_R1I, POR_R2D, POR_R2E, POR_R3C, POR_R3D, POR_M2A, ESP_R1G, ESP_R1H, ESP_R1I, ESP_R2D, ESP_R2E, ESP_R3C, ESP_R3D, ESP_M2A, ING_R1G, ING_R1H, ING_R1I, ING_R2D, ING_R2E, ING_R3C, ING_R3D, ING_M2A, ART_R1G, ART_R1H, ART_R1I, ART_R2D, ART_R2E, ART_R3C, ART_R3D, ART_M2A, MAT_R1G, MAT_R1H, MAT_R1I, MAT_R2D, MAT_R2E, MAT_R3C, MAT_R3D, MAT_M2A, FIS_R1G, FIS_R1H, FIS_R1I, FIS_R2D, FIS_R2E, FIS_R3C, FIS_R3D, FIS_M2A, QUI_R1G, QUI_R1H, QUI_R1I, QUI_R2D, QUI_R2E, QUI_R3C, QUI_R3D, QUI_M2A, BIO_R1G, BIO_R1H, BIO_R1I, BIO_R2D, BIO_R2E, BIO_R3C, BIO_R3D, BIO_M2A, HIS_R1G, HIS_R1H, HIS_R1I, HIS_R2D, HIS_R2E, HIS_R3C, HIS_R3D, HIS_M2A, GEO_R1G, GEO_R1H, GEO_R1I, GEO_R2D, GEO_R2E, GEO_R3C, GEO_R3D, GEO_M2A, SOC_R1G, SOC_R1H, SOC_R1I, SOC_R2D, SOC_R2E, SOC_R3C, SOC_R3D, SOC_M2A, FIL_R1G, FIL_R1H, FIL_R1I, FIL_R2D, FIL_R2E, FIL_R3C, FIL_R3D, FIL_M2A, EDF_R1G, EDF_R1H, EDF_R1I, EDF_R2D, EDF_R2E, EDF_R3C, EDF_R3D, EDF_M2A, EMP_R1G, EMP_R1H, EMP_R1I, EMP_R2D, EMP_R2E, EMP_R3C, EMP_R3D, EMP_M2A, MAF_R1G, MAF_R1H, MAF_R1I, MAF_R2D, MAF_R2E, MAF_R3C, MAF_R3D, MAF_M2A, GPE_R1G, GPE_R1H, GPE_R1I, GPE_R2D, GPE_R2E, GPE_R3C, GPE_R3D, GPE_M2A, ROB_R1G, ROB_R1H, ROB_R1I, ROB_R2D, ROB_R2E, ROB_R3C, ROB_R3D, ROB_M2A, CPE_R1G, CPE_R1H, CPE_R1I, CPE_R2D, CPE_R2E, CPE_R3C, CPE_R3D, CPE_M2A, MEA_R1G, MEA_R1H, MEA_R1I, MEA_R2D, MEA_R2E, MEA_R3C, MEA_R3D, MEA_M2A};
 
 array[professores] of int: K = [6, 18, 8, 10, 26, 20, 2, 24, 9, 11, 1, 10, 16, 26, 12, 8, 6, 3, 3, 2, 2, 2];
 
@@ -220,7 +220,7 @@ constraint assert (
 );
 
 constraint assert (
-  sum(a in aulas)(if forall(p in professores) (T[a, p] == 0) then 1 else 0 endif) == 60,
+  sum(a in aulas)(if forall(p in professores) (T[a, p] == 0) then 1 else 0 endif) == 49,
   "problemas com o T 2"
 );
 
@@ -308,237 +308,6 @@ array[horarios, professores] of 0..1: D =
 
 |];
 
-array[aulas, turmas] of var 0..1: g =
-% 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-[| 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
- 
- | 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
- | 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
-|];
-
 % VARIÁVEL DE DECISÃO
 array[horarios, aulas] of var 0..1: S;
 
@@ -572,31 +341,12 @@ constraint forall (d in dias, a in aulas)(
   sum(h in horarios)(Q[d, h]*S[h, a]) <= 2
 );
 
-% Aulas de biologia no 2º ano têm que ser na terça
-constraint forall (h in horarios, a in aulas where a >= BIO_R2A /\ a <= BIO_R2C) (
-  S[h, a] = 1 -> (h >= ter1 /\ h <= ter6)
-);
-
-% Preferências por aulas trocáveis
-constraint forall(h in horarios where S[h, MATF_R1A] == 1) (
-  S[h, ROB_R1B] == 1
-);
-constraint forall(h in horarios where S[h, GEOPE_R1C] == 1) (
-  S[h, MATF_R1D] == 1
-);
-constraint forall(h in horarios where S[h, ROB_R1E] == 1) (
-  S[h, GEOPE_R1F] == 1
-);
-constraint forall(h in horarios where S[h, CULPE_R2A] == 1) (
-  S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1
-);
-
 set of horarios: sextasAulas = {seg6, ter6, qua6, qui6, sex6};
 
-set of aulas: aulasDoTerceiro = {POR_R3A, POR_R3B, ESP_R3A, ESP_R3B, ART_R3A, ART_R3B, MAT_R3A, MAT_R3B, FIS_R3A, FIS_R3B, QUI_R3A, QUI_R3B, BIO_R3A, BIO_R3B, HIS_R3A, HIS_R3B, GEO_R3A, GEO_R3B, SOC_R3A, SOC_R3B, FIL_R3A, FIL_R3B, EDF_R3A, EDF_R3B, ING_R3A, ING_R3B, EMP_R3A, EMP_R3B, MATF_R3A, MATF_R3B, GEOPE_R3A, GEOPE_R3B, ROB_R3A, ROB_R3B, CULPE_R3A, CULPE_R3B, MEIA_R3A, MEIA_R3B};
+set of aulas: aulasDoTerceiroOuModulo = {POR_R3C, POR_R3D, POR_M2A, ESP_R3C, ESP_R3D, ESP_M2A, ING_R3C, ING_R3D, ING_M2A, ART_R3C, ART_R3D, ART_M2A, MAT_R3C, MAT_R3D, MAT_M2A, FIS_R3C, FIS_R3D, FIS_M2A, QUI_R3C, QUI_R3D, QUI_M2A, BIO_R3C, BIO_R3D, BIO_M2A, HIS_R3C, HIS_R3D, HIS_M2A, GEO_R3C, GEO_R3D, GEO_M2A, SOC_R3C, SOC_R3D, SOC_M2A, FIL_R3C, FIL_R3D, FIL_M2A, EDF_R3C, EDF_R3D, EDF_M2A, EMP_R3C, EMP_R3D, EMP_M2A, MAF_R3C, MAF_R3D, MAF_M2A, GPE_R3C, GPE_R3D, GPE_M2A, ROB_R3C, ROB_R3D, ROB_M2A, CPE_R3C, CPE_R3D, CPE_M2A, MEA_R3C, MEA_R3D, MEA_M2A};
 
 % Última aula dos terceiros anos é vaga.
-constraint forall(h in sextasAulas, a in aulasDoTerceiro) (
+constraint forall(h in sextasAulas, a in aulasDoTerceiroOuModulo) (
   S[h, a] == 0
 );
 
