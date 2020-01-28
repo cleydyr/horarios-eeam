@@ -273,12 +273,12 @@ array[aulas,professores] of 0..1: T =
 constraint assert (
   forall(a in aulas)(
     sum(p in professores)(T[a, p]) < 2
-  ), "problemas com o T"
+  ), "problemas com o T 1"
 );
 
 constraint assert (
-  sum(a in aulas)(if forall(p in professores) (T[a, p] == 0) then 1 else 0 endif) == 61,
-  "problemas com o T"
+  sum(a in aulas)(if forall(p in professores) (T[a, p] == 0) then 1 else 0 endif) == 60,
+  "problemas com o T 2"
 );
 
 array[professores] of int: alocacoes = [12, 5, 4, 12, 6, 7, 15, 13, 20, 6, 15, 12, 11, 10, 1];
@@ -325,7 +325,7 @@ constraint assert (
   "K incompatível"
 );
 
-array[horarios, professores] of 0..1: d =
+array[horarios, professores] of 0..1: D =
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
 /*| 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1, 1,  1*/
 [|  0,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
@@ -598,32 +598,32 @@ array[aulas, turmas] of var 0..1: g =
 % VARIÁVEL DE DECISÃO
 array[horarios, aulas] of var 0..1: S;
 
-% R1
+% (R1) nenhum professor pode estar em dois ou mais lugares ao mesmo tempo
 constraint forall (i in horarios, k in professores)(
-  let {var int: q = sum(j in aulas)(S[i, j]*T[j,k])} in (q == 0 \/ q == 1)
+  sum(j in aulas)(S[i, j]*T[j,k]) <= 1
 );
 
-% R2
-constraint forall (i in horarios, k in professores)(
-  (sum(j in aulas)(S[i, j]*T[j,k]) == 0) \/ (d[i, k] == 1)
+% (R2) se o professor está alocado para um horário h, ele deve estar disponível naquele horário h
+constraint forall (h in horarios, p in professores)(
+  (sum(a in aulas)(S[h, a]*T[a, p]) == 1) -> (D[h, p] == 1)
 );
 
-% R3
+% (R3) cada turma tem que ter exatamente o número de aulas que é determinado para ela
 constraint forall (a in aulas)(
-  let {var int: aj_ = sum(h in horarios)(S[h, a])} in aj_ == A[a]
+  sum(h in horarios)(S[h, a]) == A[a]
 );
 
-% R4
+% (R4) cada professor deve ter a carga horária de acordo com o definido
 constraint forall (p in professores)(
   sum(a in aulas, h in horarios)(S[h, a] * T[a, p]) == K[p]
 );
 
-% R6
+% (R6) nenhuma turma pode ter mais de uma aula ao mesmo tempo
 constraint forall (i in horarios, j in turmas) (
-  sum(k in aulas)(S[i, k]*g[k, j]) < 2
+  sum(k in aulas)(S[i, k]*g[k, j]) <= 1
 );
 
-% %R7
+% (R7) cada aula deve ocorrer no máximo 2 vezes por dia na mesma turma
 constraint forall (d in dias, a in aulas)(
   sum(h in horarios)(Q[d, h]*S[h, a]) <= 2
 );
@@ -637,15 +637,12 @@ constraint forall (h in horarios, a in aulas where a >= BIO_R2A /\ a <= BIO_R2C)
 constraint forall(h in horarios) (
   S[h, MATF_R1A] == 0 \/ S[h, ROB_R1B] == 1
 );
-
 constraint forall(h in horarios) (
   S[h, GEOPE_R1C] == 0 \/ S[h, MATF_R1D] == 1
 );
-
 constraint forall(h in horarios) (
   S[h, ROB_R1E] == 0 \/ S[h, GEOPE_R1F] == 1
 );
-
 constraint forall(h in horarios) (
   S[h, CULPE_R2A] == 0 \/ (S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1)
 );
@@ -658,6 +655,7 @@ set of aulas: aulasDoTerceiro = {POR_R3A, POR_R3B, ESP_R3A, ESP_R3B, ART_R3A, AR
 constraint forall(h in sextasAulas, a in aulasDoTerceiro) (
   S[h, a] == 0
 );
+
 % solve satisfy
 
 solve maximize sum(j in aulas) (
