@@ -192,10 +192,10 @@ array[aulas,professores] of 0..1: T =
  |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
 
 % CPE
+ |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
+ |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
+ |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  1,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
@@ -228,7 +228,7 @@ array[professores] of int: alocacoes = [4, 8, 8, 5, 5, 10, 1, 6, 4, 2, 1, 5, 4, 
 
 constraint assert (
   forall(p in professores) (
-    sum(a in aulas)(T[a, p]) == alocacoes[p]
+    sum(a in aulas)(T[a, p]) == trace("\(alocacoes[p])\n", alocacoes[p])
   ),
   "problemas com o T 3"
 );
@@ -373,5 +373,7 @@ predicate primeiraAula(horarios: h) = (h mod horas) == 1;
 % solve satisfy
 
 solve maximize sum(a in aulas) (
-  sum(h in horarios where not ultimaAula(h) /\ S[h, a] == 1) (S[enum_next(horarios, h), a])
+  sum(h in horarios) (
+    if (not ultimaAula(h) /\ S[h, a] == 1) then S[enum_next(horarios, h), a] else 0 endif
+  )
 );
