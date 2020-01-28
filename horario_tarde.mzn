@@ -4,7 +4,7 @@ enum turmas = {R1G, R1H, R1I, R2D, R2E, R3C, R3D, M2A};
 enum professores = {DY, MA, SH, LI, FB, FT, RI, LU, AD, KK, IL, LZ, BH, GA, Y, Z, CJ, W, H, SI, AA, MB};
 enum aulas = {POR_R1G, POR_R1H, POR_R1I, POR_R2D, POR_R2E, POR_R3C, POR_R3D, POR_M2A, ESP_R1G, ESP_R1H, ESP_R1I, ESP_R2D, ESP_R2E, ESP_R3C, ESP_R3D, ESP_M2A, ING_R1G, ING_R1H, ING_R1I, ING_R2D, ING_R2E, ING_R3C, ING_R3D, ING_M2A, ART_R1G, ART_R1H, ART_R1I, ART_R2D, ART_R2E, ART_R3C, ART_R3D, ART_M2A, MAT_R1G, MAT_R1H, MAT_R1I, MAT_R2D, MAT_R2E, MAT_R3C, MAT_R3D, MAT_M2A, FIS_R1G, FIS_R1H, FIS_R1I, FIS_R2D, FIS_R2E, FIS_R3C, FIS_R3D, FIS_M2A, QUI_R1G, QUI_R1H, QUI_R1I, QUI_R2D, QUI_R2E, QUI_R3C, QUI_R3D, QUI_M2A, BIO_R1G, BIO_R1H, BIO_R1I, BIO_R2D, BIO_R2E, BIO_R3C, BIO_R3D, BIO_M2A, HIS_R1G, HIS_R1H, HIS_R1I, HIS_R2D, HIS_R2E, HIS_R3C, HIS_R3D, HIS_M2A, GEO_R1G, GEO_R1H, GEO_R1I, GEO_R2D, GEO_R2E, GEO_R3C, GEO_R3D, GEO_M2A, SOC_R1G, SOC_R1H, SOC_R1I, SOC_R2D, SOC_R2E, SOC_R3C, SOC_R3D, SOC_M2A, FIL_R1G, FIL_R1H, FIL_R1I, FIL_R2D, FIL_R2E, FIL_R3C, FIL_R3D, FIL_M2A, EDF_R1G, EDF_R1H, EDF_R1I, EDF_R2D, EDF_R2E, EDF_R3C, EDF_R3D, EDF_M2A, EMP_R1G, EMP_R1H, EMP_R1I, EMP_R2D, EMP_R2E, EMP_R3C, EMP_R3D, EMP_M2A, MAF_R1G, MAF_R1H, MAF_R1I, MAF_R2D, MAF_R2E, MAF_R3C, MAF_R3D, MAF_M2A, GPE_R1G, GPE_R1H, GPE_R1I, GPE_R2D, GPE_R2E, GPE_R3C, GPE_R3D, GPE_M2A, ROB_R1G, ROB_R1H, ROB_R1I, ROB_R2D, ROB_R2E, ROB_R3C, ROB_R3D, ROB_M2A, CPE_R1G, CPE_R1H, CPE_R1I, CPE_R2D, CPE_R2E, CPE_R3C, CPE_R3D, CPE_M2A, MEA_R1G, MEA_R1H, MEA_R1I, MEA_R2D, MEA_R2E, MEA_R3C, MEA_R3D, MEA_M2A};
 
-array[professores] of int: K = [6, 18, 8, 10, 26, 20, 2, 24, 9, 11, 1, 10, 16, 26, 12, 8, 6, 3, 3, 2, 2, 2];
+array[professores] of int: K = [6, 18, 8, 10, 26, 20, 2, 24, 9, 10, 1, 10, 16, 26, 12, 8, 6, 3, 3, 2, 2, 2];
 
 enum horarios = {seg1, seg2, seg3, seg4, seg5, seg6, ter1, ter2, ter3, ter4, ter5, ter6, qua1, qua2, qua3, qua4, qua5, qua6, qui1, qui2, qui3, qui4, qui5, qui6, sex1, sex2, sex3, sex4, sex5, sex6};
 
@@ -92,9 +92,9 @@ array[aulas,professores] of 0..1: T =
  |  0,  0,  0,  0,  0,  1,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  1,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  1,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  1,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  1,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
- |  0,  0,  0,  0,  0,  0,  0,  1,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
+ |  0,  0,  0,  0,  0,  0,  0,  0,  1, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
+ |  0,  0,  0,  0,  0,  0,  0,  0,  1, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
+ |  0,  0,  0,  0,  0,  0,  0,  0,  1, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
  |  0,  0,  0,  0,  0,  1,  0,  0,  0, 0,  0,  0,  0,  0, 0, 0,  0, 0, 0,  0,  0,  0
 
 % HIS
@@ -226,9 +226,11 @@ constraint assert (
 
 array[professores] of int: alocacoes = [4, 8, 8, 5, 5, 10, 1, 6, 4, 2, 1, 5, 4, 16, 10, 4, 2, 3, 2, 1, 1, 1];
 
+% DY, MA, SH, LI, FB, FT, RI, LU*, AD, KK, IL, LZ, BH, GA, Y, Z, CJ, W, H, SI, AA, MB
+% 
 constraint assert (
   forall(p in professores) (
-    sum(a in aulas)(T[a, p]) == trace("\(alocacoes[p])\n", alocacoes[p])
+    sum(a in aulas)(T[a, p]) == alocacoes[p]
   ),
   "problemas com o T 3"
 );
@@ -255,12 +257,18 @@ array[aulas] of int: A = [
   0, 0, 0, 0, 1, 0, 0, 0
 ];
 
+% {R1G, R1H, R1I, R2D, R2E, R3C, R3D, M2A};
+% {R1G};
+predicate aulaNaTurma(aulas: a, turmas: t) =  t-1 == (a - 1) mod length(turmas);
+
 constraint assert (
   forall(t in turmas)(
-    sum(d in disciplinas)(A[aulas[t + (d-1)*length(turmas)]]) == if (t >= R3C \/ t <= M2A) then 25 else 30 endif
+    sum(a in aulas where aulaNaTurma(a, t))(A[a]) == if (t >= R3C /\ t <= M2A) then 25 else 30 endif
   ), "problemas com o A"
 );
 
+% DY, MA, SH, LI, FB, FT, RI, LU, AD, KK, IL, LZ, BH, GA, Y, Z, CJ, W, H, SI, AA, MB
+% KK, IL
 constraint assert (
   forall(p in professores) (
     sum(a in aulas)(A[a]*T[a, p]) == K[p]
@@ -333,7 +341,6 @@ constraint forall (p in professores)(
 
 
 % (R6) nenhuma turma pode ter mais de uma aula ao mesmo tempo
-predicate aulaNaTurma(aulas: a, turmas: t) =  t-1 == (a - 1) mod length(turmas);
 
 constraint forall (t in turmas, h in horarios) (
   sum(a in aulas where aulaNaTurma(a, t))(S[h, a]) <= 1
