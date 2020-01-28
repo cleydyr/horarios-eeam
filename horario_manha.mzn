@@ -4,7 +4,7 @@ enum turmas = {R1A, R1B, R1C, R1D, R1E, R1F, R2A, R2B, R2C, R3A, R3B};
 enum professores = {SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC};
 enum aulas = {POR_R1A, POR_R1B, POR_R1C, POR_R1D, POR_R1E, POR_R1F, POR_R2A, POR_R2B, POR_R2C, POR_R3A, POR_R3B, ESP_R1A, ESP_R1B, ESP_R1C, ESP_R1D, ESP_R1E, ESP_R1F, ESP_R2A, ESP_R2B, ESP_R2C, ESP_R3A, ESP_R3B, ART_R1A, ART_R1B, ART_R1C, ART_R1D, ART_R1E, ART_R1F, ART_R2A, ART_R2B, ART_R2C, ART_R3A, ART_R3B, MAT_R1A, MAT_R1B, MAT_R1C, MAT_R1D, MAT_R1E, MAT_R1F, MAT_R2A, MAT_R2B, MAT_R2C, MAT_R3A, MAT_R3B, FIS_R1A, FIS_R1B, FIS_R1C, FIS_R1D, FIS_R1E, FIS_R1F, FIS_R2A, FIS_R2B, FIS_R2C, FIS_R3A, FIS_R3B, QUI_R1A, QUI_R1B, QUI_R1C, QUI_R1D, QUI_R1E, QUI_R1F, QUI_R2A, QUI_R2B, QUI_R2C, QUI_R3A, QUI_R3B, BIO_R1A, BIO_R1B, BIO_R1C, BIO_R1D, BIO_R1E, BIO_R1F, BIO_R2A, BIO_R2B, BIO_R2C, BIO_R3A, BIO_R3B, HIS_R1A, HIS_R1B, HIS_R1C, HIS_R1D, HIS_R1E, HIS_R1F, HIS_R2A, HIS_R2B, HIS_R2C, HIS_R3A, HIS_R3B, GEO_R1A, GEO_R1B, GEO_R1C, GEO_R1D, GEO_R1E, GEO_R1F, GEO_R2A, GEO_R2B, GEO_R2C, GEO_R3A, GEO_R3B, SOC_R1A, SOC_R1B, SOC_R1C, SOC_R1D, SOC_R1E, SOC_R1F, SOC_R2A, SOC_R2B, SOC_R2C, SOC_R3A, SOC_R3B, FIL_R1A, FIL_R1B, FIL_R1C, FIL_R1D, FIL_R1E, FIL_R1F, FIL_R2A, FIL_R2B, FIL_R2C, FIL_R3A, FIL_R3B, EDF_R1A, EDF_R1B, EDF_R1C, EDF_R1D, EDF_R1E, EDF_R1F, EDF_R2A, EDF_R2B, EDF_R2C, EDF_R3A, EDF_R3B, ING_R1A, ING_R1B, ING_R1C, ING_R1D, ING_R1E, ING_R1F, ING_R2A, ING_R2B, ING_R2C, ING_R3A, ING_R3B, EMP_R1A, EMP_R1B, EMP_R1C, EMP_R1D, EMP_R1E, EMP_R1F, EMP_R2A, EMP_R2B, EMP_R2C, EMP_R3A, EMP_R3B, MATF_R1A, MATF_R1B, MATF_R1C, MATF_R1D, MATF_R1E, MATF_R1F, MATF_R2A, MATF_R2B, MATF_R2C, MATF_R3A, MATF_R3B, GEOPE_R1A, GEOPE_R1B, GEOPE_R1C, GEOPE_R1D, GEOPE_R1E, GEOPE_R1F, GEOPE_R2A, GEOPE_R2B, GEOPE_R2C, GEOPE_R3A, GEOPE_R3B, ROB_R1A, ROB_R1B, ROB_R1C, ROB_R1D, ROB_R1E, ROB_R1F, ROB_R2A, ROB_R2B, ROB_R2C, ROB_R3A, ROB_R3B, CULPE_R1A, CULPE_R1B, CULPE_R1C, CULPE_R1D, CULPE_R1E, CULPE_R1F, CULPE_R2A, CULPE_R2B, CULPE_R2C, CULPE_R3A, CULPE_R3B, MEIA_R1A, MEIA_R1B, MEIA_R1C, MEIA_R1D, MEIA_R1E, MEIA_R1F, MEIA_R2A, MEIA_R2B, MEIA_R2C, MEIA_R3A, MEIA_R3B};
 
-array[professores] of int: K = [23, 26, 20, 29, 26, 26, 30, 26, 26, 11, 26, 11, 21, 18, 1];
+array[professores] of int: K = [23, 26, 20, 29, 30, 26, 30, 25, 26, 11, 26, 12, 21, 14, 1];
 
 enum horarios = {seg1, seg2, seg3, seg4, seg5, seg6, ter1, ter2, ter3, ter4, ter5, ter6, qua1, qua2, qua3, qua4, qua5, qua6, qui1, qui2, qui3, qui4, qui5, qui6, sex1, sex2, sex3, sex4, sex5, sex6};
 
@@ -21,8 +21,8 @@ array[dias, horarios] of 0..1: Q =
 array[aulas,professores] of 0..1: T =
 /*{POR, ESP, ART, MAT, FIS, QUI, BIO, HIS, GEO, SOC, FIL, EDF, ING, EMP, MATF, GEOPE, ROB, CULPE, MEIA};*/
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
-% POR
-[|  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
+% POR X
+[|  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -33,8 +33,8 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
-% ESP
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
+% ESP X
+|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -45,9 +45,9 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
-% ART
+% ART X
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
-|   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
+|   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -59,20 +59,20 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 
-% MAT
+% MAT X
 |   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
-|   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0
+|   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
 
-% FIS
+% FIS X
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
 |   0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0, 0, 0,  0
@@ -99,21 +99,21 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0, 0, 0,  0
 
-% BIO
+% BIO X
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0
+|   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0
+|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
+|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
-% HIS
+% HIS X
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
@@ -126,7 +126,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0, 0, 0,  0
 
-% GEO
+% GEO X
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
@@ -139,7 +139,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
 
-% SOC
+% SOC X
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0, 0, 0,  0
@@ -153,7 +153,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
 
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
-% FIL
+% FIL X
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
@@ -165,7 +165,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, 0, 0,  0
-% EDF
+% EDF X
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0
@@ -177,7 +177,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0
-% ING
+% ING X
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -189,13 +189,13 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
-% EMP
+% EMP X
 /* SY, BI, DE, MA, BH, RA, LI, SI, LE, LZ, IV, SH, X, Y, LC */
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 1,  0 
+|   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 1,  0
+|   0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 1,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 1,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 1,  0
@@ -204,7 +204,7 @@ array[aulas,professores] of 0..1: T =
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 
 % MATF
-|   0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
+|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1, 0, 0,  0 
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -258,7 +258,7 @@ array[aulas,professores] of 0..1: T =
 
 %MEIA
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0 
-|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
+|   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 1, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
 |   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0,  0
@@ -281,13 +281,13 @@ constraint assert (
   "problemas com o T"
 );
 
-array[professores] of int: alocacoes = [12, 5, 4, 12, 6, 7, 15, 11, 20, 6, 15, 11, 11, 12, 1];
+array[professores] of int: alocacoes = [12, 5, 4, 12, 6, 7, 15, 13, 20, 6, 15, 12, 11, 10, 1];
 
 constraint assert (
   forall(p in professores) (
     sum(a in aulas)(T[a, p]) == alocacoes[p]
   ),
-  "aqui"
+  "problemas com o T 3"
 );
 
 array[aulas] of int: A = [
@@ -333,14 +333,14 @@ array[horarios, professores] of 0..1: d =
  |  0,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
  |  0,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
  |  0,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
- |  0,  1,  0,  1,  1,  0,  1,  1,  1,  1,  1,  0, 1, 0,  0
+ |  0,  1,  0,  1,  1,  0,  1,  1,  1,  1,  0,  0, 1, 1,  0
  
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 0,  0
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 0,  0
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 0,  0
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 0,  0
- |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 1,  0
- |  1,  1,  1,  1,  1,  1,  1,  0,  1,  0,  0,  1, 0, 1,  0
+ |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 0, 0,  0
+ |  1,  0,  1,  1,  1,  1,  1,  1,  0,  0,  1,  1, 0, 0,  0
  
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  0, 1, 1,  0
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  0, 1, 1,  0
@@ -356,12 +356,12 @@ array[horarios, professores] of 0..1: d =
  |  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1,  1, 1, 0,  0
  |  1,  1,  1,  1,  1,  0,  1,  1,  1,  0,  0,  1, 1, 0,  0
  
- |  1,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 0, 1,  0
+ |  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 0,  0
+ |  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 0,  0
+ |  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
  |  1,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
- |  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
- |  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
- |  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
- |  1,  1,  1,  1,  0,  0,  1,  1,  1,  1,  0,  0, 0, 1,  1
+ |  1,  1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  0, 1, 1,  0
+ |  1,  0,  0,  1,  1,  0,  1,  1,  1,  1,  0,  0, 1, 1,  1
 |];
 
 array[aulas, turmas] of var 0..1: g =
@@ -625,7 +625,12 @@ constraint forall (i in horarios, j in turmas) (
 
 % %R7
 constraint forall (d in dias, a in aulas)(
-  sum(h in horarios)(Q[d, h]*S[h, a]) < 3
+  sum(h in horarios)(Q[d, h]*S[h, a]) <= 2
+);
+
+% Aulas de biologia no 2º ano têm que ser na terça
+constraint forall (h in horarios, a in aulas where a >= BIO_R2A /\ a <= BIO_R2C) (
+  S[h, a] = 1 -> (h >= ter1 /\ h <= ter6)
 );
 
 % Preferências por aulas trocáveis
@@ -645,10 +650,13 @@ constraint forall(h in horarios) (
   S[h, CULPE_R2A] == 0 \/ (S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1)
 );
 
+set of horarios: sextasAulas = {seg6, ter6, qua6, qui6, sex6};
+
+set of aulas: aulasDoTerceiro = {POR_R3A, POR_R3B, ESP_R3A, ESP_R3B, ART_R3A, ART_R3B, MAT_R3A, MAT_R3B, FIS_R3A, FIS_R3B, QUI_R3A, QUI_R3B, BIO_R3A, BIO_R3B, HIS_R3A, HIS_R3B, GEO_R3A, GEO_R3B, SOC_R3A, SOC_R3B, FIL_R3A, FIL_R3B, EDF_R3A, EDF_R3B, ING_R3A, ING_R3B, EMP_R3A, EMP_R3B, MATF_R3A, MATF_R3B, GEOPE_R3A, GEOPE_R3B, ROB_R3A, ROB_R3B, CULPE_R3A, CULPE_R3B, MEIA_R3A, MEIA_R3B};
 
 % Última aula dos terceiros anos é vaga.
-constraint forall(a in 1..length(aulas)) (
-  if (a-1) mod length(turmas) > length(turmas) - 3 then forall(h in 1..length(horarios)) ( if ((h-1) mod 6) == 5 then S[horarios[h], aulas[a]] == 0 else true endif) else true endif
+constraint forall(h in sextasAulas, a in aulasDoTerceiro) (
+  S[h, a] == 0
 );
 % solve satisfy
 
