@@ -331,14 +331,18 @@ constraint forall (p in professores)(
   sum(a in aulas, h in horarios)(S[h, a] * T[a, p]) == K[p]
 );
 
+
 % (R6) nenhuma turma pode ter mais de uma aula ao mesmo tempo
-constraint forall (i in horarios, j in turmas) (
-  sum(k in aulas)(S[i, k]*g[k, j]) <= 1
+predicate aulaNaTurma(aulas: a, turmas: t) =  t-1 == (a - 1) mod length(turmas);
+
+constraint forall (t in turmas, h in horarios) (
+  sum(a in aulas where aulaNaTurma(a, t))(S[h, a]) <= 1
 );
 
 % (R7) cada aula deve ocorrer no máximo 2 vezes por dia na mesma turma
+
 constraint forall (d in dias, a in aulas)(
-  sum(h in horarios)(Q[d, h]*S[h, a]) <= 2
+  sum(h in horarios)(S[h, a]) <= 2
 );
 
 set of horarios: sextasAulas = {seg6, ter6, qua6, qui6, sex6};
