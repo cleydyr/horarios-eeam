@@ -636,18 +636,18 @@ constraint forall (h in horarios, a in aulas where a >= BIO_R2A /\ a <= BIO_R2C)
 );
 
 % Preferências por aulas trocáveis
-constraint forall(h in horarios where S[h, MATF_R1A] == 1) (
-  S[h, ROB_R1B] == 1
-);
-constraint forall(h in horarios where S[h, GEOPE_R1C] == 1) (
-  S[h, MATF_R1D] == 1
-);
-constraint forall(h in horarios where S[h, ROB_R1E] == 1) (
-  S[h, GEOPE_R1F] == 1
-);
-constraint forall(h in horarios where S[h, CULPE_R2A] == 1) (
-  S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1
-);
+% constraint forall(h in horarios where S[h, MATF_R1A] == 1) (
+%   S[h, ROB_R1B] == 1
+% );
+% constraint forall(h in horarios where S[h, GEOPE_R1C] == 1) (
+%   S[h, MATF_R1D] == 1
+% );
+% constraint forall(h in horarios where S[h, ROB_R1E] == 1) (
+%   S[h, GEOPE_R1F] == 1
+% );
+% constraint forall(h in horarios where S[h, CULPE_R2A] == 1) (
+%   S[h, MEIA_R2B] == 1 /\ S[h, ROB_R2C] == 1
+% );
 
 set of horarios: sextasAulas = {seg6, ter6, qua6, qui6, sex6};
 
